@@ -13,12 +13,14 @@ int main() {
 	int const n = 5;
 
     int Numbers[n];
+	int number;
 
 	for (int i = 0; i < n; i++) {
 		cout << "Ââåäèòå " << i + 1 << "-å ÷èñëî: ";
-		cin >> Numbers[i];
+		cin >> number;
+		Numbers[i] = number;
 		cin.ignore(32767, '\n');
-		if (cin.fail()) {
+		if (cin.fail() || number <=0) {
 			cout << "Îøèáêà ââîäà" << endl;
 			return 1;
 		}
